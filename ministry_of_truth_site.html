@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ministry of Truth Recruitment</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.5s, color 0.5s;
+    }
+    header {
+      background-color: #b30000;
+      padding: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+    .eye {
+      display: block;
+      margin: 2rem auto;
+      width: 150px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+      }
+    }
+    .content {
+      text-align: center;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .slogan {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      font-style: italic;
+    }
+    .button, .dark-mode-toggle {
+      background-color: #b30000;
+      color: #fff;
+      padding: 1rem 2rem;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 1rem;
+      transition: background-color 0.3s;
+    }
+    .button:hover, .dark-mode-toggle:hover {
+      background-color: #8a0000;
+    }
+    form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+    input, textarea {
+      padding: 0.75rem;
+      width: 80%;
+      max-width: 400px;
+      border: none;
+      background-color: #222;
+      color: #eee;
+      font-size: 1rem;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #888;
+    }
+    footer {
+      background-color: #222;
+      color: #777;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+    }
+    .dark-mode {
+      background-color: #eee;
+      color: #111;
+    }
+    .dark-mode header {
+      background-color: #222;
+    }
+    .dark-mode footer {
+      background-color: #ddd;
+      color: #333;
+    }
+    .ticker {
+      background-color: #b30000;
+      color: #fff;
+      padding: 0.5rem;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 15s linear infinite;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2023/02/01/audio_7f63e6fb5a.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="ticker">
+    <div class="ticker-text">⚠️ Thoughtcrime is punishable. Report suspicious activity. Loyalty is freedom. ⚠️</div>
+  </div>
+
+  <header>
+    Work for the Ministry of Truth
+  </header>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Big_Brother_Eye.svg/1024px-Big_Brother_Eye.svg.png" alt="Big Brother Eye" class="eye" />
+
+  <div class="content">
+    <p class="slogan">"Work Will Set You Free"</p>
+    <p>
+      Join the most vital institution in the Party's mission to ensure harmony, loyalty, and unshakable truth. As a valued worker in the Ministry of Truth, your duty is to maintain historical accuracy, correct misinformation, and uphold the values of the Party.
+    </p>
+    <p>
+      Do you believe in absolute truth? Are you loyal to the cause? We are watching—and we need you.
+    </p>
+
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <textarea rows="4" placeholder="Why are you loyal to the Party?" required></textarea>
+      <button type="submit" class="button">Submit Application</button>
+    </form>
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <footer>
+    &copy; 1984 Ministry of Truth. All thoughts monitored.
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
